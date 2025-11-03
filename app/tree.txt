@@ -1,0 +1,62 @@
+Folder PATH listing
+Volume serial number is 54DE-CB4F
+C:.
+¦   tree.txt
+¦   
++---Http
+¦   ¦   Kernel.php
+¦   ¦   
+¦   +---Controllers
+¦   ¦   ¦   Controller.php
+¦   ¦   ¦   HospitalRegistrationController.php
+¦   ¦   ¦   InstallController.php
+¦   ¦   ¦   ProfileController.php
+¦   ¦   ¦   SuperAdminController.php
+¦   ¦   ¦   
+¦   ¦   +---Auth
+¦   ¦   ¦       ForgotPasswordController.php
+¦   ¦   ¦       LoginController.php
+¦   ¦   ¦       ResetPasswordController.php
+¦   ¦   ¦       VerificationController.php
+¦   ¦   ¦       
+¦   ¦   +---Hospital
+¦   ¦   ¦       DashboardController.php
+¦   ¦   ¦       DepartmentController.php
+¦   ¦   ¦       SettingsController.php
+¦   ¦   ¦       StaffController.php
+¦   ¦   ¦       
+¦   ¦   +---SuperAdmin
+¦   ¦           AnalyticsController.php
+¦   ¦           PaymentController.php
+¦   ¦           UserController.php
+¦   ¦           
+¦   +---Middleware
+¦           Authenticate.php
+¦           Doctor.php
+¦           EncryptCookies.php
+¦           HospitalAdmin.php
+¦           IdentifyTenant.php
+¦           LabTechnician.php
+¦           Nurse.php
+¦           Patient.php
+¦           Pharmacist.php
+¦           PreventRequestsDuringMaintenance.php
+¦           Receptionist.php
+¦           RedirectIfAuthenticated.php
+¦           SuperAdmin.php
+¦           TrimStrings.php
+¦           TrustProxies.php
+¦           ValidateSignature.php
+¦           VerifyCsrfToken.php
+¦           
++---Models
+¦       Appointment.php
+¦       Department.php
+¦       Hospital.php
+¦       HospitalPaymentSettings.php
+¦       Patient.php
+¦       User.php
+¦       
++---Providers
+        AppServiceProvider.php
+        

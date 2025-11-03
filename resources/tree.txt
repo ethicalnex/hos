@@ -1,0 +1,84 @@
+Folder PATH listing
+Volume serial number is 54DE-CB4F
+C:.
+¦   tree.txt
+¦   
++---css
+¦       app.css
+¦       
++---js
+¦       app.js
+¦       bootstrap.js
+¦       
++---views
+    ¦   welcome.blade.php
+    ¦   
+    +---auth
+    ¦   ¦   login.blade.php
+    ¦   ¦   verify.blade.php
+    ¦   ¦   
+    ¦   +---passwords
+    ¦           email.blade.php
+    ¦           reset.blade.php
+    ¦           
+    +---hospital
+    ¦   +---dashboard
+    ¦   ¦       index.blade.php
+    ¦   ¦       
+    ¦   +---departments
+    ¦   ¦       create.blade.php
+    ¦   ¦       edit.blade.php
+    ¦   ¦       index.blade.php
+    ¦   ¦       
+    ¦   +---layouts
+    ¦   ¦       app.blade.php
+    ¦   ¦       
+    ¦   +---settings
+    ¦   ¦       index.blade.php
+    ¦   ¦       payment.blade.php
+    ¦   ¦       
+    ¦   +---staff
+    ¦           create.blade.php
+    ¦           edit.blade.php
+    ¦           index.blade.php
+    ¦           
+    +---hospital-registration
+    ¦       register.blade.php
+    ¦       
+    +---install
+    ¦       admin.blade.php
+    ¦       complete.blade.php
+    ¦       database.blade.php
+    ¦       permissions.blade.php
+    ¦       requirements.blade.php
+    ¦       welcome.blade.php
+    ¦       
+    +---profile
+    ¦       edit.blade.php
+    ¦       show.blade.php
+    ¦       
+    +---super-admin
+        ¦   analytics.blade.php
+        ¦   dashboard.blade.php
+        ¦   hospitals.blade.php
+        ¦   payments.blade.php
+        ¦   users.blade.php
+        ¦   
+        +---analytics
+        ¦       index.blade.php
+        ¦       
+        +---components
+        +---dashboard
+        +---hospitals
+        ¦       create.blade.php
+        ¦       index.blade.php
+        ¦       
+        +---layouts
+        ¦       app.blade.php
+        ¦       
+        +---payments
+        ¦       index.blade.php
+        ¦       
+        +---users
+                index.blade.php
+                
