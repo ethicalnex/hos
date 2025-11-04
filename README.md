@@ -1,61 +1,236 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# EthicalNex Hospital Management System
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+> A modern, scalable, multi-role hospital management system built with Laravel 12 + Bootstrap 5 + Montserrat font.  
+> Designed for hospitals in Northern Nigeria — with support for Hausa/Yoruba translation, offline sync, mobile app integration, and AI-powered features.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 🌟 Features
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- ✅ **Multi-role access**: Super Admin, Hospital Admin, Doctor, Nurse, Lab Technician, Pharmacist, Receptionist, Patient
+- ✅ **Subscription-based plans**: Free Trial, Clinic Basic, Hospital Standard, Enterprise Hospital
+- ✅ **Feature Access Control**: EMR, Lab, Pharmacy, Billing, Appointments — enabled/disabled per plan
+- ✅ **Real-time Analytics & Reporting**
+- ✅ **Mobile App Ready**: REST API + Push Notifications + Offline Sync
+- ✅ **Payment Integration**: Paystack & Flutterwave
+- ✅ **AI-Powered Insights**: Symptom checker, diagnosis assistant, voice-to-text for EMR
+- ✅ **PWA Support**: Installable on mobile devices
+- ✅ **Clean UI**: Montserrat font, #007e5d primary color, #f8c828 secondary color
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## 👥 User Roles & Permissions
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+| Role | Dashboard | EMR | Lab | Pharmacy | Appointments | Settings | Subscription | Analytics |
+|------|---------|-----|-----|----------|--------------|----------|-------------|-----------|
+| Super Admin | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Hospital Admin | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Doctor | ✅ | ✅ | ✅ | ❌ | ✅ | ❌ | ❌ | ❌ |
+| Nurse | ✅ | ✅ | ✅ | ❌ | ✅ | ❌ | ❌ | ❌ |
+| Lab Technician | ✅ | ❌ | ✅ | ❌ | ✅ | ❌ | ❌ | ❌ |
+| Pharmacist | ✅ | ❌ | ❌ | ✅ | ✅ | ❌ | ❌ | ❌ |
+| Receptionist | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ | ❌ | ❌ |
+| Patient | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ | ❌ | ❌ |
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+> 🔐 Feature access is controlled by subscription plan.  
+> 🧩 You can enable/disable features per plan in `database/migrations/xxxx_create_subscription_plans_table.php`.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## 🛠️ Technologies Used
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+- **Backend**: Laravel 12.34.0 (PHP 8.4.0)
+- **Frontend**: Bootstrap 5.3, Font Awesome 6, Montserrat font
+- **Database**: MySQL
+- **Authentication**: Laravel Sanctum (token-based for mobile apps)
+- **Payments**: Paystack & Flutterwave
+- **API**: RESTful, versioned (`v1`)
+- **Mobile**: PWA + Offline Sync + Push Notifications
+- **Deployment**: WAMP/XAMPP/Laravel Valet
+ 
+## ⚙️ Installation Guide
 
-### Premium Partners
+### Clone repositiry 
+https://github.com/yourusername/EthicalNex.git
+cd EthicalNex
+```
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### 2. Install Dependencies
 
-## Contributing
+```bash
+composer install
+npm install
+npm run build
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 3. Create `.env` File
 
-## Code of Conduct
+```bash
+cp .env.example .env
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### 4. Generate App Key
 
-## Security Vulnerabilities
+```bash
+php artisan key:generate
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### 5. Configure Database
 
-## License
+Edit `.env`:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=ethicalnex
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+### 6. Run Migrations
+
+```bash
+php artisan migrate
+```
+
+### 7. Seed Data (Optional)
+
+```bash
+php artisan db:seed
+```
+
+### 8. Start Server
+
+```bash
+php artisan serve
+```
+
+Visit: [http://localhost:8000](http://localhost:8000)
+
+---
+
+## 📱 Mobile App Integration
+
+### 1. API Base URL
+
+```
+http://localhost:8000/api/v1
+```
+
+### 2. Authentication
+
+- Login: `POST /login` → returns `token`
+- Use `Authorization: Bearer <token>` for all requests
+
+### 3. Test API
+
+Visit: [http://localhost:8000/api/v1/documentation](http://localhost:8000/api/v1/documentation)  
+→ Test all endpoints live from your browser.
+
+### 4. Push Notifications
+
+Use Firebase or OneSignal.  
+Install SDK:
+
+```bash
+composer require kreait/laravel-firebase
+php artisan vendor:publish --provider="Kreait\Laravel\Firebase\FirebaseServiceProvider"
+```
+
+### 5. Offline Sync
+
+- Pull: `POST /sync/pull`
+- Push: `POST /sync/push`
+
+---
+
+## 📊 API Documentation
+
+Visit: [http://localhost:8000/api/v1/documentation](http://localhost:8000/api/v1/documentation)  
+→ Live testing for all endpoints.
+
+---
+
+## 🧪 Testing
+
+Run tests:
+
+```bash
+php artisan test
+```
+
+---
+
+## 🚨 Troubleshooting
+
+### 1. "Target class [feature.access] does not exist"
+
+→ Fix: Make sure you have `app/Http/Middleware/CheckFeatureAccess.php` and it’s registered in `app/Http/Kernel.php`.
+
+### 2. "MethodNotAllowedHttpException"
+
+→ Fix: Use correct HTTP method (GET/POST/PUT/DELETE).
+
+### 3. "SQLSTATE[42S22]: Column not found"
+
+→ Fix: Run `php artisan migrate`.
+
+### 4. "Not Found" for API routes
+
+→ Fix: Ensure `routes/api.php` is loaded in `app/Providers/RouteServiceProvider.php`.
+
+### 5. "Class 'App\Models\LabCategory' not found"
+
+→ Fix: Create the model and migration.
+
+---
+
+## 🌍 Translation (Hausa/Yoruba)
+
+To add translation:
+
+1. Create `resources/lang/ha.json` and `resources/lang/yo.json`
+2. Add translations
+3. Use `__()` helper in views
+
+Example `resources/lang/ha.json`:
+
+```json
+{
+    "Dashboard": "Dashboard",
+    "Patients": "Ranar Gidaje",
+    "Staff": "Gidajen"
+}
+```
+
+---
+
+## 🚀 Future Roadmap
+
+- ✅ AI Diagnosis Assistant
+- ✅ Voice-to-Text for EMR
+- ✅ SMS Reminders
+- ✅ Mobile App (Flutter/React Native)
+- ✅ Multi-language Support (Hausa, Yoruba, Igbo)
+- ✅ Telemedicine Integration
+
+---
+
+## 📞 Contact
+
+For support or customization:
+
+- Email: support@ethicalnex.com
+- Website: [https://ethicalnex.com](https://ethicalnex.com)
+
+---
+
+## 📜 License
+
+MIT © 2025 EthicalNex
+
+---
+
+> 💡 This system is designed for real-world use in Nigerian hospitals.  
+> If you need help deploying or customizing it, contact us.
